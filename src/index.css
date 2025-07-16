@@ -54,6 +54,21 @@
 
     --radius: 0.5rem;
 
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 86% 55%));
+    --gradient-health: linear-gradient(135deg, hsl(200 85% 55%), hsl(220 90% 65%));
+    --gradient-food: linear-gradient(135deg, hsl(32 95% 60%), hsl(45 93% 58%));
+    --gradient-background: linear-gradient(180deg, hsl(120 25% 98%), hsl(140 20% 95%));
+
+    /* Shadows */
+    --shadow-meal-card: 0 8px 32px hsl(142 76% 36% / 0.1);
+    --shadow-floating: 0 20px 60px hsl(142 76% 36% / 0.15);
+    --shadow-glow: 0 0 40px hsl(142 86% 55% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -69,22 +84,6 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 86% 55%));
-    --gradient-health: linear-gradient(135deg, hsl(200 85% 55%), hsl(220 90% 65%));
-    --gradient-food: linear-gradient(135deg, hsl(32 95% 60%), hsl(45 93% 58%));
-    --gradient-background: linear-gradient(180deg, hsl(120 25% 98%), hsl(140 20% 95%));
-
-    /* Shadows */
-    --shadow-meal-card: 0 8px 32px hsl(142 76% 36% / 0.1);
-    --shadow-floating: 0 20px 60px hsl(142 76% 36% / 0.15);
-    --shadow-glow: 0 0 40px hsl(142 86% 55% / 0.3);
-
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
