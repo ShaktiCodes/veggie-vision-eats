@@ -2,39 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* AI Calorie Tracker Design System - Fresh, Health-Focused Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Background & Surfaces */
+    --background: 120 20% 98%;
+    --foreground: 140 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 140 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 140 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Fresh Green */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 86% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Soft Green */
+    --secondary: 140 30% 94%;
+    --secondary-foreground: 140 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted */
+    --muted: 140 20% 95%;
+    --muted-foreground: 140 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Food Orange */
+    --accent: 32 95% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Health Blue */
+    --health: 200 85% 55%;
+    --health-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Nutrition Colors */
+    --protein: 340 82% 52%;
+    --carbs: 45 93% 58%;
+    --fats: 260 60% 65%;
+
+    /* Status */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --success: 142 76% 36%;
+
+    --border: 140 20% 88%;
+    --input: 140 20% 92%;
+    --ring: 142 76% 36%;
 
     --radius: 0.5rem;
 
@@ -55,34 +71,72 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 86% 55%));
+    --gradient-health: linear-gradient(135deg, hsl(200 85% 55%), hsl(220 90% 65%));
+    --gradient-food: linear-gradient(135deg, hsl(32 95% 60%), hsl(45 93% 58%));
+    --gradient-background: linear-gradient(180deg, hsl(120 25% 98%), hsl(140 20% 95%));
+
+    /* Shadows */
+    --shadow-meal-card: 0 8px 32px hsl(142 76% 36% / 0.1);
+    --shadow-floating: 0 20px 60px hsl(142 76% 36% / 0.15);
+    --shadow-glow: 0 0 40px hsl(142 86% 55% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mode - Health App Theme */
+    --background: 140 25% 8%;
+    --foreground: 140 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 140 20% 12%;
+    --card-foreground: 140 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 140 20% 12%;
+    --popover-foreground: 140 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 76% 50%;
+    --primary-foreground: 140 25% 8%;
+    --primary-glow: 142 86% 65%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 140 15% 15%;
+    --secondary-foreground: 140 20% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 140 15% 15%;
+    --muted-foreground: 140 10% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 32 95% 65%;
+    --accent-foreground: 140 25% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --health: 200 85% 60%;
+    --health-foreground: 140 25% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --protein: 340 82% 60%;
+    --carbs: 45 93% 65%;
+    --fats: 260 60% 70%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 140 25% 8%;
+    --warning: 38 92% 55%;
+    --success: 142 76% 50%;
+
+    --border: 140 15% 20%;
+    --input: 140 15% 18%;
+    --ring: 142 76% 50%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 50%), hsl(142 86% 65%));
+    --gradient-health: linear-gradient(135deg, hsl(200 85% 60%), hsl(220 90% 70%));
+    --gradient-food: linear-gradient(135deg, hsl(32 95% 65%), hsl(45 93% 65%));
+    --gradient-background: linear-gradient(180deg, hsl(140 25% 8%), hsl(140 20% 12%));
+
+    /* Dark Shadows */
+    --shadow-meal-card: 0 8px 32px hsl(0 0% 0% / 0.3);
+    --shadow-floating: 0 20px 60px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(142 86% 65% / 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

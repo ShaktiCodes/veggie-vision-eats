@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +53,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				health: {
+					DEFAULT: 'hsl(var(--health))',
+					foreground: 'hsl(var(--health-foreground))'
+				},
+				nutrition: {
+					protein: 'hsl(var(--protein))',
+					carbs: 'hsl(var(--carbs))',
+					fats: 'hsl(var(--fats))'
+				},
+				warning: 'hsl(var(--warning))',
+				success: 'hsl(var(--success))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +74,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-health': 'var(--gradient-health)',
+				'gradient-food': 'var(--gradient-food)',
+				'gradient-background': 'var(--gradient-background)'
+			},
+			boxShadow: {
+				'meal-card': 'var(--shadow-meal-card)',
+				'floating': 'var(--shadow-floating)',
+				'glow': 'var(--shadow-glow)'
+			},
+			transitionTimingFunction: {
+				'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
