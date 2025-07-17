@@ -1,4 +1,4 @@
-# AI CALORIE TRACKER
+# 🥦 AI Calorie Tracker
 
 ## Project info
 
@@ -6,7 +6,7 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/ShaktiCodes/veggie-vision-eats.git
 
 # Step 2: Install the necessary dependencies.
 npm i
